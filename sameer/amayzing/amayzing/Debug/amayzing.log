@@ -1,0 +1,14 @@
+﻿Build started 6/25/2013 11:52:35 AM.
+     1>Project "c:\Users\Student\documents\visual studio 2010\Projects\amayzing\amayzing\amayzing.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\amayzing.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\amayzing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt amayzing.cpp
+         amayzing.cpp
+     1>c:\users\student\documents\visual studio 2010\projects\amayzing\amayzing\amayzing.cpp(12): error C2065: 'i' : undeclared identifier
+     1>Done Building Project "c:\Users\Student\documents\visual studio 2010\Projects\amayzing\amayzing\amayzing.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.06
