@@ -1,0 +1,13 @@
+package com.secondproject.isa;
+
+public class Dog {
+	private int age;
+
+	public void setAge(int in-age){
+		age = in_age;
+
+
+
+	}
+
+}

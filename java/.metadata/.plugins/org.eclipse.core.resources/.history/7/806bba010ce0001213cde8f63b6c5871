@@ -1,0 +1,15 @@
+package com.color.isa;
+
+public class color {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		JTextArea textbox = new JTextArea("hello world");
+		textbox.setForeground(Color.red)
+		// TODO Auto-generated method stub
+
+	}
+
+}

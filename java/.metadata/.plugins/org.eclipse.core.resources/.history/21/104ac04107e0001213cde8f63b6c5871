@@ -1,0 +1,14 @@
+package com.secondproject.isa;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Dog rascal = new Dog("rascal",0);
+		
+		System.out.print(rascal.name);
+	}
+
+}
