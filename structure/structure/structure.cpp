@@ -12,7 +12,7 @@
 //{attack with bow}
 //else()
 //{attack with dagger}
-
+// libraries
 #include "stdafx.h"
 #include <iostream>
 #include <string>
@@ -23,6 +23,8 @@
 #include <WinCon.h>
 
 using namespace std;
+
+//items and classes(people) 
 
 class monster
 {
@@ -94,32 +96,33 @@ struct ammo
 	int damage;
 };
 
-
+//functions
+// makes letters come one by one
 void scrollingText(string message)
 {
 	for(int i = 0; i < message.length(); i++)
 	{
-		Sleep(60);
+		Sleep(10);
 		cout << message.c_str()[i];
 
 	}
 }
-
+// generates a random number
 int randomnumber()
 {
 	return rand()%1;
 }
-
+//greentext
 void greenText ()
 {
 	SetConsoleTextAttribute (GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_GREEN);
 }
-
+//redtext
 void redText ()
 {
 	SetConsoleTextAttribute (GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_RED);
 }
-
+//says player name
 void print_info(player player1)
 {
 	cout<<player1.name;
@@ -128,7 +131,7 @@ void redtext()
 {
 	SetConsoleTextAttribute (GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_RED);
 }
-
+// cheaks player health
 void checkHealth(player player1)
 {
 	if (player1.health < 20)
@@ -143,6 +146,7 @@ void checkHealth(player player1)
 }
 int _tmain(int argc, _TCHAR* argv[])
 {
+	//these are where the answers to the questions are stored
 	string nametown;
 	string choice2;
 	string choice;
@@ -154,6 +158,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	string yes;
 	string attack;
 	string finalize1;
+	//this is including class and items
 	player player1;
 	monster monster1;
 	sword  sword1;
@@ -163,7 +168,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	ammo ammo2;
 	dagger dagger1;
 	fists fists1;
-
+	//setting damage and other atributes
 	ammo1.damage=20;
 	ammo2.damage=30;
 	bow1.range=10;
@@ -185,7 +190,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	dagger1.damage=5;
 	dagger1.range=1;
-
+	//player dosent have these items at beginging
 	player1.has_dagger=false;
 	player1.has_sword=false;
 	player1.has_bow=false;
@@ -194,6 +199,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	greenText();
 	do
 	{
+		// the program subtracts points while setting health,strength,magic
 		scrollingText("made by sameer isa ");
 		scrollingText("this game has not been completed ");
 
@@ -229,7 +235,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 		scrollingText("would you like a bow or sword");
 		cin>>choice;
-
+		//pick weapons
 		if(choice=="bow")
 		{
 			player1.has_bow=true;
@@ -240,6 +246,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			player1.has_sword=true;
 		}
+		//cout is the normal way to say something
+		//cin stores answer in a string
 		cout<<"would you like to finalize information";
 		cin>>finalize1;
 	}
@@ -248,8 +256,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	print_info(player1);
 	scrollingText(" name your town here");
 	cin>>nametown;
-	do
+	do // do and while is a loop makes the program reapeat
 	{
+		//scrollingtext is the function at top
 		scrollingText(" earth is being taken over by a mysterious dark force.");
 		scrollingText(" you must fight creatures and defend your town.");
 		scrollingText(" you will have to kill the mysterious force to win.");
@@ -515,6 +524,7 @@ int _tmain(int argc, _TCHAR* argv[])
 							}
 							else
 							{
+								//if the player has a sword
 								if (player1.has_sword=true)
 								{
 									cout<<"you charge behind with the kings body and block attacks with you shield.";
@@ -528,15 +538,25 @@ int _tmain(int argc, _TCHAR* argv[])
 							scrollingText("you have succsefully fought off the monsters" );
 							scrollingText("the town buries the king");
 							scrollingText("you become the new king.");
-							
+							scrollingText("you see a new civilization");
+							cin>>f;
+								if(f=="visit"||f=="visit them")
+								{
+
+								}
+								else
+								{
+
+								}
 						
 						}
 						else
 						{
-							scrollingText("you wall the path the king told you you see a hut");
+							scrollingText("you walk the path the king told you. you see a hut");
 							scrollingText("then all of a sudden monsters surrouned you like they knew you were coming");
 							cout<<"you have died would you like to retry";
 							cin>>f;
+							
 
 
 						}
@@ -557,4 +577,5 @@ int _tmain(int argc, _TCHAR* argv[])
 	}while(s=="yes");
 
 	return 0;
+	
 }

@@ -1,9 +1,8 @@
-﻿Build started 7/1/2013 3:01:52 PM.
-     1>Project "\\130.132.135.95\iD Shared\P101-1\_Examples\Pong\Pong\Pong.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         Pong.vcxproj -> \\130.132.135.95\iD Shared\P101-1\_Examples\Pong\Debug\Pong.exe
-     1>Done Building Project "\\130.132.135.95\iD Shared\P101-1\_Examples\Pong\Pong\Pong.vcxproj" (Build target(s)).
+﻿Build started 7/4/2013 10:14:41 AM.
+     1>Project "C:\Users\Student\Desktop\sameer isa\Pong\Pong\Pong.vcxproj" on node 2 (build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Platforms\Win32\Microsoft.Cpp.Win32.Targets(518,5): error MSB8008: Specified platform toolset (v110) is not installed or invalid. Please make sure that a supported PlatformToolset value is selected.
+     1>Done Building Project "C:\Users\Student\Desktop\sameer isa\Pong\Pong\Pong.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.12
+Time Elapsed 00:00:00.25
