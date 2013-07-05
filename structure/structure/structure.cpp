@@ -12,6 +12,10 @@
 //{attack with bow}
 //else()
 //{attack with dagger}
+
+
+
+
 // libraries
 #include "stdafx.h"
 #include <iostream>
@@ -269,7 +273,8 @@ int _tmain(int argc, _TCHAR* argv[])
 		scrollingText (" would you like to attack the creature or escape.");
 		cin>>attack;
 		if(attack=="attack")
-		{
+			// if statments do different things according to the answer
+		
 			scrollingText (" you and the other soliders attack the creatures.");
 
 			do
@@ -295,6 +300,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					{
 						monster1.health -= ammo1.damage; 
 						player1.ammo-=1;
+						//here the monsters health is being subtracted by the damage of the weapon 
 						scrollingText(" you shot the monster with the bow. ");
 
 						scrollingText(" The monster misses.");
@@ -331,6 +337,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				do{
 					if(player1.has_bow==true)
 					{
+						//this is the market
 						cout<<"healing potions heal right when bought";	
 						cout<<" 1 arrows 20 gold each ";
 						cout<<" 2 healing potion 50 gold ";
@@ -339,6 +346,7 @@ int _tmain(int argc, _TCHAR* argv[])
 						cout<< "you have"<<player1.health<<"health";
 
 						cin>>choice;
+						//there are two if statements for each selection
 						if(choice=="1")
 						{
 							if(player1.money>=20)
@@ -355,6 +363,7 @@ int _tmain(int argc, _TCHAR* argv[])
 								if(player1.money>=50)
 								{
 									player1.money-=50;
+									//this sets player health to the players maximum health
 									player1.health=player1.maxhealth;
 								}
 								else
@@ -371,6 +380,7 @@ int _tmain(int argc, _TCHAR* argv[])
 				}while(choice != "3");
 			}
 			else
+				//this is for if you picked the sword instead of the bow
 			{	
 				{
 					cout<<"healing potions heal you completly once bought";
@@ -537,45 +547,47 @@ int _tmain(int argc, _TCHAR* argv[])
 							}
 							scrollingText("you have succsefully fought off the monsters" );
 							scrollingText("the town buries the king");
-							scrollingText("you become the new king.");
-							scrollingText("you see a new civilization");
-							cin>>f;
-								if(f=="visit"||f=="visit them")
-								{
+							scrollingText("you are voted to be the new king.");
+							scrollingText("this is it you say. we will raid the dark forces base");
+							scrollingText("you send your troops from the front and go from behind" );
+							scrollingText("you come to the the enemys throne" );
+						
+							
+								scrollingText("the dark enemy was a man");
+								cout<<"its time you stab the man";
+								cout<<"his body disapeered. and then you knew....it isnt over.";
+									cout<<"to be countinued...";
 
-								}
-								else
-								{
 
-								}
+							
 						
 						}
-						else
-						{
+						
+						
 							scrollingText("you walk the path the king told you. you see a hut");
 							scrollingText("then all of a sudden monsters surrouned you like they knew you were coming");
 							cout<<"you have died would you like to retry";
 							cin>>f;
 							
 
-
-						}
+						
 					}
 				}
 
 
 			}while(f=="yes");
-
+			// if they pick yes then it will loop
 
 
 			
 
-		}
+		
 		cout<<" your action has caused your allies to get outnumbered and die. the king banishes you from the kingdom."; 
 		cout<<"would you like to retry";
 		cin>>s;
 	}while(s=="yes");
-
+	
+	
 	return 0;
 	
 }
